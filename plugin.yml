@@ -1,0 +1,24 @@
+name: RisingAntiCheat
+version: '${project.version}'
+main: me.rising.anticheat.RisingAntiCheat
+api-version: '1.21'
+author: Rising
+description: Rising AntiCheat - проверки боя и X-Ray с ручной верификацией админом
+
+commands:
+  rac:
+    description: Управление Rising AntiCheat
+    usage: /rac <pass|ban|check|vl|reload> [игрок]
+    permission: rac.admin
+  setcheter:
+    description: Установить точку проверки читеров
+    usage: /setcheter
+    permission: rac.admin
+
+permissions:
+  rac.admin:
+    description: Админ-доступ, получение алертов
+    default: op
+  rac.bypass:
+    description: Игнорируется античитом
+    default: false
